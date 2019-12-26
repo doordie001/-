@@ -1,0 +1,64 @@
+Import turtle as t		# 파이썬 터틀 그래픽 임포트
+
+t.hideturtle()	# 터틀 숨기기
+
+def forward():	# 전진 함수 선언
+	t.setheading(90)
+	t.forward(10)
+  
+def back():	# 후진 함수 선언
+	t.setheading(270)
+	t.forward(10)
+  
+def left():	# 좌회전 함수 선언
+	t.setheading(180)
+	t.forward(10)
+  
+def right():	# 우회전 함수 선언
+	t.setheading(0)
+	t.forward(10)
+  
+def circle():	# 원 만드는 함수 선언
+	t.penup()
+	t.setheading(270)
+	t.forward(5)
+	t.pendown()
+	t.circle(5)
+	t.penup()
+	t.setheading(90)
+	t.forward(5)
+	t.pendown()
+  
+def yellow():	# 노랑색 펜 함수 선언
+	t.pencolor(“yellow”)
+  
+def green():	# 초록색 펜 함수 선언
+	t.pencolor(“green”)
+  
+def red():	# 빨강색 펜 함수 선언
+	t.pencolor(“red”)
+  
+def black():	# 검정색 펜 함수 선언
+	t.pencolor(“black”)
+  
+def penup():	# 펜 들기 함수 선언
+	t.penup()
+  
+def pendown():	# 펜 붙히기 함수 선언
+	t.pendown()
+
+#사용자 입력을 받는 명령어
+t.onkeypress(forward,”w”)
+t.onkeypress(back,”s”)
+t.onkeypress(right,”d”)
+t.onkeypress(left,”a”)
+t.onkeypress(red,”r”)
+t.onkeypress(green,”g”)
+t.onkeypress(yellow,”y”)
+t.onkeypress(black,”b”)
+t.onkeypress(circle,”c”)
+t.onkeypress(pendown,”o”)
+t.onkeypress(penup,”p”)
+
+t.listen()
+t.mainloop()
